@@ -1,5 +1,14 @@
+import React, { useEffect } from 'react';
+import AOS from 'aos';
+import 'aos/dist/aos.css';
 import { IoSearchSharp } from "react-icons/io5";
 const Faqs = () => {
+    useEffect(() => {
+        AOS.init({ 
+            duration: 1000 
+
+        }); 
+      }, []);
     return (
         <>
         {/* Faqs Start */}
@@ -31,7 +40,7 @@ const Faqs = () => {
                             </div>
                         </div>
                         {/* Left svg */}
-                        <div className="col-md-6">
+                        <div className="col-md-6" data-aos="zoom-in" data-aos-duration="10000">
                             <svg
                                 viewBox="0 0 502.3 300.7"
                                 style={{ enableBackground: "new 0 0 502.3 300.7" }}
@@ -718,7 +727,7 @@ const Faqs = () => {
                 </div>
             </section>
 
-            <section className="pt-0">
+            <section className="pt-0" data-aos="flip-left" data-aos-duration="3000">
                 <div className="container">
                     <div className="bg-primary bg-opacity-10 rounded p-4 p-sm-5">
                         <div className="row">

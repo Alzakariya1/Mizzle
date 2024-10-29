@@ -1,9 +1,19 @@
+// Import AOS library and CSS
+import AOS from 'aos';
+import 'aos/dist/aos.css';
+import React, { useEffect } from 'react';
 import About from "./About";
 import Service from "./Service";
 import Blog from "./Blog";
 import Faqs from "./Faqs";
 import Contact from "./Contact";
 const Home = () => {
+    useEffect(() => {
+        AOS.init({ 
+            duration:1000 
+
+        }); // Optional settings
+      }, []);
     return (
         <>
             <section className="position-relative overflow-hidden pb-0 pt-xl-9">
@@ -42,11 +52,29 @@ const Home = () => {
                                     🤩 Award-winning digital services
                                 </span>
                                 {/* Title */}
-                                <h1 className="mt-3 lh-base">
+                                <h1 className="mt-3 lh-base" data-aos="zoom-in" data-aos-duration="1000">
                                     Creative studio focused on
                                     <span className="cd-headline clip big-clip is-full-width text-primary mb-0 d-block d-xxl-inline-block">
-                                        <span className="typed" data-type-text="Web Design&amp;&amp;Web Dev&amp;&amp;UI/UX Design">UI/UX </span>
-                                        <span className="ityped-cursor">|</span>
+                                        
+                                        <span data-aos="fade-left-up" data-aos-delay="1000">U</span>
+                                        <span data-aos="fade-left-up" data-aos-delay="1100">I</span>
+                                        <span data-aos="fade-left-up" data-aos-delay="1200">/</span>
+                                        <span data-aos="fade-left-up" data-aos-delay="1300">U</span>
+                                        <span data-aos="fade-left-up" data-aos-delay="1400">X</span>
+                                        {" "}
+                                        <span data-aos="fade-left-up" data-aos-delay="1400">&</span>
+                                        {" "}
+                                        <span data-aos="fade-left-up" data-aos-delay="1500">W</span>
+                                        <span data-aos="fade-left-up" data-aos-delay="1600">e</span>
+                                        <span data-aos="fade-left-up" data-aos-delay="1700">b</span>
+                                        {" "}
+                                        <span data-aos="fade-left-up" data-aos-delay="1800">D</span>
+                                        <span data-aos="fade-left-up" data-aos-delay="1900">e</span>
+                                        <span data-aos="fade-left-up" data-aos-delay="2000">s</span>
+                                        <span data-aos="fade-left-up" data-aos-delay="2100">i</span>
+                                        <span data-aos="fade-left-up" data-aos-delay="2200">g</span>
+                                        <span data-aos="fade-left-up" data-aos-delay="2300">n</span>
+                                        <span data-aos="fade-left-up" data-aos-delay="2400">|</span>
                                     </span>
                                 </h1>
                                 <p className="mb-0 mt-4 mt-md-5">
@@ -71,7 +99,7 @@ const Home = () => {
                                 <div className="row mt-5">
                                     <div className="col-md-6 mb-5 mb-md-0">
                                         {/* Features item */}
-                                        <div className="d-flex align-items-center">
+                                        <div className="d-flex align-items-center" data-aos="flip-left" data-aos-duration="3000">
                                             {/* Svg icon */}
                                             <figure className="text-primary mb-0">
                                                 <svg
@@ -119,7 +147,7 @@ const Home = () => {
                                     </div>
                                     <div className="col-md-6">
                                         {/* Features item */}
-                                        <div className="d-flex align-items-center">
+                                        <div className="d-flex align-items-center" data-aos="flip-left" data-aos-duration="3000">
                                             {/* Svg icon */}
                                             <figure className="text-primary mb-0">
                                                 <svg
@@ -177,9 +205,11 @@ const Home = () => {
                                 </svg>
                             </figure>
                             {/* Hero image */}
+                            <div className='HeroImg' data-aos="zoom-in" data-aos-delay="100" >
                             <img src="/Image/bg/01.jpg" className="rounded" alt="hero-img" />
+                            </div>
                             {/* Visitor box START */}
-                            <div className="d-inline-block bg-dark rounded-4 position-absolute start-0 bottom-0 mb-md-4 ms-md-n5 p-3">
+                            <div className="d-inline-block bg-dark rounded-4 position-absolute start-0 bottom-0 mb-md-4 ms-md-n5 p-3" data-aos="fade-up-right" data-aos-duration="3000">
                                 <div className="d-flex align-items-center">
                                     <h6 className="text-white mb-0 me-2">5K+</h6>
                                     <ul className="avatar-group mb-0 align-items-center">
@@ -224,7 +254,7 @@ const Home = () => {
                             </div>
                             {/* Visitor box END */}
                             {/* Trustpilot review START */}
-                            <div className="d-inline-block card card-body shadow rounded-4 position-absolute end-0 top-0 p-3 me-lg-n3 me-xxl-n7 mt-n5 d-none d-sm-block">
+                            <div className="d-inline-block card card-body shadow rounded-4 position-absolute end-0 top-0 p-3 me-lg-n3 me-xxl-n7 mt-n5 d-none d-sm-block" data-aos="fade-down-left" data-aos-duration="3000">
                                 <img
                                     src="/Image/element/trustpilot.svg"
                                     className="light-mode-item h-20px mb-2"
@@ -256,7 +286,6 @@ const Home = () => {
             <Blog />
             <Faqs/>
             <Contact/>
-
         </>
     );
 }

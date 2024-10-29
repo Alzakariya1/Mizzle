@@ -1,3 +1,6 @@
+import React, { useEffect } from 'react';
+import AOS from 'aos';
+import 'aos/dist/aos.css';
 import {Link } from "react-router-dom";
 import { GoStack } from "react-icons/go";
 import { FaCubes } from "react-icons/fa";
@@ -10,6 +13,13 @@ import { TbBrandPinterest } from "react-icons/tb";
 import { FaArrowRight } from "react-icons/fa6";
 import { IoCall } from "react-icons/io5";
 const Service = () => {
+    useEffect(() => {
+        AOS.init({ 
+            duration: 1000 
+
+        }); 
+      }, []);
+    
     return (
         <>
         {/* =======================Services START */}
@@ -18,7 +28,7 @@ const Service = () => {
                     <div className="row align-items-center">
                         {/* Title */}
                         <div className="col-md-7 col-xl-6 mb-7 mb-md-0">
-                            <h1 className="mb-4">Discover the solutions we offer</h1>
+                            <h1 className="mb-4" data-aos="fade-right" data-aos-duration="3000">Discover the solutions we offer</h1>
                             <p className="mb-4">
                                 Our experienced team is dedicated to helping you achieve your goals
                                 through innovative technology.{" "}
@@ -69,7 +79,7 @@ const Service = () => {
                             </div>
                         </div>
                         {/* Image */}
-                        <div className="col-md-5 ms-auto">
+                        <div className="col-md-5 ms-auto" data-aos="zoom-in" data-aos-duration="2500">
                             <img src="/Image/element/service.svg" alt="" />
                         </div>
                     </div>
@@ -78,7 +88,7 @@ const Service = () => {
 
 
             <section
-                className="bg-primary-subtle position-relative overflow-hidden"
+                className="bg-primary-subtle position-relative overflow-hidden" data-aos="zoom-in" data-aos-duration="3000"
                 data-bs-theme="dark"
             >
 
@@ -93,7 +103,7 @@ const Service = () => {
                     {/* Service list START */}
                     <div className="row row-cols-1 row-cols-sm-2 row-cols-lg-3 row-cols-xl-4 gy-5 gy-md-7 mt-3">
                         {/* Service item */}
-                        <div className="col">
+                        <div className="col ServiceCard">
                             <div className="card bg-dark h-100">
                                 <div className="card-body pb-0">
                                     {/* Icon */}
@@ -116,7 +126,7 @@ const Service = () => {
                             </div>
                         </div>
                         {/* Service item */}
-                        <div className="col">
+                        <div className="col ServiceCard">
                             <div className="card bg-dark h-100">
                                 <div className="card-body pb-0">
                                     {/* Icon */}
@@ -138,7 +148,7 @@ const Service = () => {
                             </div>
                         </div>
                         {/* Service item */}
-                        <div className="col">
+                        <div className="col ServiceCard">
                             <div className="card bg-dark h-100">
                                 <div className="card-body pb-0">
                                     {/* Icon */}
@@ -163,7 +173,7 @@ const Service = () => {
                             </div>
                         </div>
                         {/* Service item */}
-                        <div className="col">
+                        <div className="col ServiceCard">
                             <div className="card bg-dark h-100">
                                 <div className="card-body pb-0">
                                     {/* Icon */}
@@ -187,7 +197,7 @@ const Service = () => {
                             </div>
                         </div>
                         {/* Service item */}
-                        <div className="col">
+                        <div className="col ServiceCard">
                             <div className="card bg-dark h-100">
                                 <div className="card-body pb-0">
                                     {/* Icon */}
@@ -209,7 +219,7 @@ const Service = () => {
                             </div>
                         </div>
                         {/* Service item */}
-                        <div className="col">
+                        <div className="col ServiceCard">
                             <div className="card bg-dark h-100">
                                 <div className="card-body pb-0">
                                     {/* Icon */}
@@ -231,7 +241,7 @@ const Service = () => {
                             </div>
                         </div>
                         {/* Service item */}
-                        <div className="col">
+                        <div className="col ServiceCard">
                             <div className="card bg-dark h-100">
                                 <div className="card-body pb-0">
                                     {/* Icon */}
@@ -253,7 +263,7 @@ const Service = () => {
                             </div>
                         </div>
                         {/* Service item */}
-                        <div className="col">
+                        <div className="col ServiceCard">
                             <div className="card bg-dark h-100">
                                 <div className="card-body pb-0">
                                     {/* Icon */}

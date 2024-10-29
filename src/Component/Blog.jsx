@@ -1,3 +1,6 @@
+import React, { useEffect } from 'react';
+import AOS from 'aos';
+import 'aos/dist/aos.css';
 import { CiShare2 } from "react-icons/ci";
 import { FaRegCommentDots } from "react-icons/fa";
 import { FaFacebook } from "react-icons/fa6";
@@ -11,6 +14,12 @@ import { IoIosStar } from "react-icons/io";
 import { IoIosStarHalf } from "react-icons/io";
 
 const Blog = () => {
+    useEffect(() => {
+        AOS.init({ 
+            duration: 1000 
+
+        }); 
+      }, []);
     return (
         <>
             <section className="pt-8 pt-xl-9">
@@ -29,7 +38,7 @@ const Blog = () => {
                                 {/* Avatar */}
                                 <div className="d-flex justify-content-center align-items-center mb-5 mb-sm-0">
                                     <div className="avatar flex-shrink-0">
-                                        <img
+                                        <img 
                                             className="avatar-img rounded-circle"
                                             src="/Image/avatar/05.jpg"
                                             alt="avatar"
@@ -102,7 +111,7 @@ const Blog = () => {
                         </div>
                         {/* Image */}
                         <div className="col-lg-10 mx-auto text-center">
-                            <img
+                            <img data-aos="zoom-in" data-aos-duration="10000"
                                 src="/Image/blog/04.jpg"
                                 className="img-fluid rounded"
                                 alt="blog-img"
@@ -149,7 +158,7 @@ const Blog = () => {
                                         data-glightbox=""
                                         data-gallery="image-popup"
                                     >
-                                        <img
+                                        <img data-aos="zoom-in-left" data-aos-duration="10000"
                                             src="/Image/blog/05.jpg"
                                             className="rounded"
                                             alt="blog-img"
@@ -162,7 +171,7 @@ const Blog = () => {
                                         data-glightbox=""
                                         data-gallery="image-popup"
                                     >
-                                        <img
+                                        <img data-aos="zoom-in-right" data-aos-duration="10000"
                                             src="/Image/blog/06.jpg"
                                             className="rounded"
                                             alt="blog-img"
@@ -222,19 +231,19 @@ const Blog = () => {
                         </div>
                         {/* Image */}
                         <div className="col-lg-10 mx-auto text-center">
-                            <img
+                            <img data-aos="zoom-in" data-aos-duration="10000"
                                 src="/Image/blog/07.jpg"
                                 className="img-fluid rounded"
                                 alt="blog-img"
                             />
                         </div>
                         {/* Quote and actions */}
-                        <div className="col-lg-8 mx-auto text-center">
+                        <div className="col-lg-8 mx-auto text-center" data-aos="flip-left" data-aos-duration="80000">
                             {/* Quote */}
                             <h5 className="display-2 text-primary lh-0 mb-0">
                                 <i className="bi bi-quote"><FaQuoteLeft /></i>
                             </h5>
-                            <q className="fs-4 heading-color">
+                            <q className="fs-4 heading-color" >
                                 Fulfilled direction use continually set him propriety continued.
                                 Farther-related bed and passage comfort civilly. Concluded boy
                                 perpetual old supposing.
@@ -353,14 +362,14 @@ const Blog = () => {
                                     💖 Real results from real clients
                                 </span>
                                 {/* Title */}
-                                <h2 className="my-4">See how we've helped our clients succeed</h2>
-                                <h6 className="mb-0">More than 1500+ agencies using Mizzle</h6>
+                                <h2 className="my-4" data-aos="zoom-out" data-aos-duration="10000">See how we've helped our clients succeed</h2>
+                                <h6 className="mb-0" data-aos="zoom-in" data-aos-duration="10000">More than 1500+ agencies using Mizzle</h6>
                             </div>
 
                             {/* Slider START */}
                             <div className="reView">
                                 {/* Testimonial 1 */}
-                                <div className="card" style={{ width: "15rem", height: "9rem" }}>
+                                <div className="card"  data-aos="fade-up-right" data-aos-duration="30000" style={{ width: "15rem", height: "9rem" }}>
                                     <div className="ratingStar">
                                         <ul className="list-inline mb-2">
                                             <li className="list-inline-item me-0">
@@ -401,7 +410,7 @@ const Blog = () => {
                                 </div>
 
                                 {/* Testimonial 2 */}
-                                <div className="card" style={{ width: "15rem", height: "9rem" }}>
+                                <div className="card"  data-aos="fade-up-left" data-aos-duration="30000" style={{ width: "15rem", height: "9rem" }}>
                                     <div className="ratingStar">
                                         <ul className="list-inline mb-2">
                                             <li className="list-inline-item me-0">
@@ -442,7 +451,7 @@ const Blog = () => {
                                 </div>
 
                                 {/* Testimonial 3 */}
-                                <div className="card" style={{ width: "15rem", height: "8rem" }}>
+                                <div className="card"  data-aos="fade-up-right" data-aos-duration="30000" style={{ width: "15rem", height: "8rem" }}>
                                     <div className="ratingStar">
                                         <ul className="list-inline mb-2">
                                             <li className="list-inline-item me-0">
@@ -481,7 +490,7 @@ const Blog = () => {
                                 </div>
 
                                 {/* Testimonial 4 */}
-                                <div className="card" style={{ width: "15rem", height: "8rem" }}>
+                                <div className="card"  data-aos="fade-up-left" data-aos-duration="30000" style={{ width: "15rem", height: "8rem" }}>
                                     <div className="ratingStar">
                                         <ul className="list-inline mb-2">
                                             <li className="list-inline-item me-0">
@@ -509,7 +518,7 @@ const Blog = () => {
                                         </p>
                                     </div>
                                     {/* Avatar */}
-                                    <div className="d-flex align-items-center">
+                                    <div className="d-flex align-items-center" >
                                         <div className="avatar avatar-sm flex-shrink-0 me-2">
                                             <img
                                                 className="avatar-img rounded"
@@ -517,7 +526,7 @@ const Blog = () => {
                                                 alt="avatar"
                                             />
                                         </div>
-                                        <p className="mb-0">By Nix Maxwell</p>
+                                        <p className="mb-0">By Hermini Dev</p>
                                     </div>
                                 </div>
                             </div>
@@ -526,7 +535,7 @@ const Blog = () => {
                         {/* Testimonials image */}
                         <div className="col-sm-10 col-lg-6 col-xl-5 position-relative ms-xl-auto">
                             {/* Image */}
-                            <img
+                            <img  data-aos="fade-left" data-aos-duration="30000"
                                 src="/Image/about/03.jpg"
                                 className="rounded"
                                 alt="testimonial-img"
@@ -551,7 +560,7 @@ const Blog = () => {
 
                             {/* Message decoration */}
                             <div className="col-11 col-sm-8 position-absolute top-0 start-0 mt-n2 mt-sm-7 ms-n2 ms-sm-n7">
-                                <div className="bg-dark rounded d-flex align-items-center px-3 py-2">
+                                <div className="bg-dark rounded d-flex align-items-center px-3 py-2"  data-aos="fade-right" data-aos-duration="30000">
                                     {/* Avatar */}
                                     <div className="avatar avatar-sm flex-shrink-0 me-2">
                                         <img
@@ -567,10 +576,10 @@ const Blog = () => {
                             </div>
 
                             {/* Message decoration */}
-                            <div className="bg-white rounded shadow d-flex align-items-center position-absolute bottom-0 start-0 mb-sm-5 ms-sm-n5 px-3 py-2">
+                            <div className="bg-white rounded shadow d-flex align-items-center position-absolute bottom-0 start-0 mb-sm-5 ms-sm-n5 px-3 py-2" data-aos="fade-right" data-aos-duration="30000">
                                 {/* Avatar */}
-                                <div className="avatar avatar-sm flex-shrink-0 me-2">
-                                    <img
+                                <div className="avatar avatar-sm flex-shrink-0 me-2" >
+                                    <img 
                                         className="avatar-img rounded-circle"
                                         src="/Image/avatar/03.jpg"
                                         alt="avatar"

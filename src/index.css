@@ -20977,4 +20977,18 @@ a.text-primary-hover:hover, button.text-primary-hover:hover {
     max-height: 300px;
   }
 }
+.HeroImg{
+  border:.5px gray;
+  border-radius: 5px;
+  cursor: pointer;
+}
+.HeroImg:hover{
+  border: 5px black ;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+.ServiceCard:hover{
+  cursor:pointer;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  box-sizing: border-box;
+}
 /*User CSS*/

@@ -1,5 +1,14 @@
+import React, { useEffect } from 'react';
+import AOS from 'aos';
+import 'aos/dist/aos.css';
 import { Link } from "react-router-dom";
 const About = () => {
+    useEffect(() => {
+        AOS.init({ 
+            duration: 1000 
+
+        }); 
+      }, []);
     return (
         <>
             <>
@@ -14,7 +23,7 @@ About START */}
                                 <span className="font-heading heading-color d-inline-block bg-light px-3 py-2 rounded-3 mb-4">
                                     🤩 What Drives Us
                                 </span>
-                                <h1 className="mb-4">
+                                <h1 className="mb-4" data-aos="zoom-in" data-aos-duration="3000">
                                     We are an Independent Brand, Design, and Communication Agency
                                 </h1>
                                 <p className="lead mb-0">
@@ -24,16 +33,16 @@ About START */}
                                     and Aerial Cinematography.
                                 </p>
                                 {/* Image and content START */}
-                                <div className="row g-4 mt-5 mx-auto align-items-end">
-                                    <div className="col-md-5 position-relative">
+                                <div className="row g-4 mt-5 mx-auto align-items-end" >
+                                    <div className="col-md-5 position-relative" >
                                         {/* Image */}
-                                        <img
+                                        <img data-aos="zoom-in" data-aos-duration="3000"
                                             src="/Image/about/14.jpg"
                                             className="rounded mb-4"
                                             alt="about-img"
                                         />
                                         {/* SVG decoration */}
-                                        <figure className="position-absolute top-0 start-0 z-index-1 mt-n6 ms-n5">
+                                        <figure className="position-absolute top-0 start-0 z-index-1 mt-n6 ms-n5" >
                                             <svg
                                                 width={167}
                                                 height={107}
@@ -73,7 +82,7 @@ About START */}
                                                 </svg>
                                             </figure>
                                             {/* Image */}
-                                            <img
+                                            <img  data-aos="zoom-in" data-aos-duration="3000"
                                                 src="/Image/about/16.jpg"
                                                 className="rounded mb-4 w-50"
                                                 alt="about-img"
@@ -409,7 +418,7 @@ About START */}
                                             </svg>
                                         </figure>
                                         {/* Goal */}
-                                        <div className="card card-body bg-dark text-start z-index-2 w-75 p-5 mb-4">
+                                        <div className="card card-body bg-dark text-start z-index-2 w-75 p-5 mb-4"  data-aos="fade-up-left" data-aos-duration="3000">
                                             <span className="text-white">Our Goal:</span>
                                             <h4 className="text-white fw-light mb-0 mt-3">
                                                 "We believe that it takes great people to deliver a great
@@ -418,7 +427,7 @@ About START */}
                                         </div>
                                         {/* Image */}
                                         <div className="card card-body overflow-hidden p-0">
-                                            <img
+                                            <img  data-aos="fade-up" data-aos-duration="3000"
                                                 src="/Image/about/15.jpg"
                                                 className="card-img"
                                                 alt="about-img"
@@ -455,7 +464,7 @@ About START */}
                                 <div className="row pe-xl-5">
                                     <div className="col-sm-6">
                                         {/* About image */}
-                                        <img
+                                        <img  data-aos="fade-right" data-aos-duration="10000"
                                             src="/Image/about/02.jpg"
                                             className="rounded"
                                             alt="about-img"
@@ -487,13 +496,13 @@ About START */}
                                     <div className="col-sm-6">
                                         {/* Skill set */}
                                         <div className="row mb-4">
-                                            <div className="col-sm-6 mb-4 mb-sm-0">
+                                            <div className="col-sm-6 mb-4 mb-sm-0" data-aos="fade-up-right" data-aos-duration="10000">
                                                 <div className="bg-dark text-white rounded text-center p-3">
                                                     <span className="h2 text-white">10+</span>
                                                     <p className="mb-0">Years of experience</p>
                                                 </div>
                                             </div>
-                                            <div className="col-sm-6">
+                                            <div className="col-sm-6" data-aos="fade-down-left" data-aos-duration="10000">
                                                 <div className="bg-primary rounded text-center p-3">
                                                     <span className="h2 text-white">1.2K</span>
                                                     <p className="mb-0 text-white">Happy customers</p>
@@ -501,7 +510,7 @@ About START */}
                                             </div>
                                         </div>
                                         {/* About image */}
-                                        <img
+                                        <img data-aos="fade-up-left" data-aos-duration="13000"
                                             src="/Image/about/01.jpg"
                                             className="rounded"
                                             alt="about-img-2"

@@ -1,7 +1,16 @@
+import React, { useEffect } from 'react';
+import AOS from 'aos';
+import 'aos/dist/aos.css';
 import { CiLocationOn } from "react-icons/ci";
 import { IoMdMail } from "react-icons/io";
 import { IoCall } from "react-icons/io5";
 const Contact = () => {
+    useEffect(() => {
+        AOS.init({ 
+            duration: 1000 
+
+        }); 
+      }, []);
     return (
         <>
             {/* content start*/}
@@ -10,7 +19,7 @@ const Contact = () => {
                     <div className="row g-4 g-xxl-5">
                         <div className="col-xl-9 mx-auto">
                             {/* Image */}
-                            <img
+                            <img data-aos="zoom-in" data-aos-duration="30000"
                                 src="/Image/contact/02.jpg"
                                 className="rounded"
                                 alt="contact-bg"
